@@ -6,10 +6,6 @@
  * copyright 2023 codewithsadee
  */
 
-
-
-
-
 /* -----------------------------------*\
   #CUSTOM PROPERTY
 \*----------------------------------- */
@@ -47,9 +43,21 @@
   --white-alpha-4: hsla(0, 0%, 100%, 0.04);
   --white-alpha-8: hsla(0, 0%, 100%, 0.08);
   --black-alpha-10: hsla(0, 0%, 0%, 0.1);
-  --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
-  --gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
-  --ff-nunito-sans: 'Nunito Sans', sans-serif;
+  --gradient-1:
+    linear-gradient(
+      180deg,
+      hsla(270, 5%, 7%, 0) 0%,
+      hsla(270, 5%, 7%, 0.8) 65%,
+      hsl(270, 5%, 7%) 100%
+    );
+  --gradient-2:
+    linear-gradient(
+      180deg,
+      hsla(260, 5%, 12%, 0) 0%,
+      hsla(260, 5%, 12%, 0.8) 65%,
+      hsl(260, 5%, 12%) 100%
+    );
+  --ff-nunito-sans: "Nunito Sans", sans-serif;
   --heading: 5.6rem;
   --title-1: 2rem;
   --title-2: 1.8rem;
@@ -157,7 +165,7 @@ body {
   font-family: 'Material Symbols Rounded';
   font-style: normal;
   font-weight: 400;
-  src: url(../font/material-symbol-rounded.woff2) format('woff2');
+  src: url(../font/material-symbol-rounded.woff2) format("woff2");
 }
 
 .m-icon {
@@ -215,7 +223,7 @@ body {
 }
 
 .has-state::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -246,65 +254,33 @@ body {
   #HEADER
 \*----------------------------------- */
 
-
-
-
-
 /* -----------------------------------*\
   #CURRENT WEATHER
 \*----------------------------------- */
-
-
-
-
 
 /* -----------------------------------*\
   #HIGHLIGHTS
 \*----------------------------------- */
 
-
-
-
-
 /* -----------------------------------*\
   #HOURLY FORECAST
 \*----------------------------------- */
-
-
-
-
 
 /* -----------------------------------*\
   #FORECAST
 \*----------------------------------- */
 
-
-
-
-
 /* -----------------------------------*\
   #LOADING
 \*----------------------------------- */
-
-
-
-
 
 /* -----------------------------------*\
   #ERROR SECTION
 \*----------------------------------- */
 
-
-
-
-
 /* -----------------------------------*\
   #FOOTER
 \*----------------------------------- */
-
-
-
-
 
 /* -----------------------------------*\
   #MEDIA QUERIES
