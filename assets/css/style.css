@@ -1,6 +1,6 @@
-/*-----------------------------------*\
+/* -----------------------------------*\
   #style.css
-\*-----------------------------------*/
+\*----------------------------------- */
 
 /**
  * copyright 2023 codewithsadee
@@ -10,67 +10,69 @@
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #CUSTOM PROPERTY
-\*-----------------------------------*/
-
-:root {
-  --primary: #B5A1E5; 
---on-primary: #100E17; 
---background: #131214;
---on-background: #EAE6F2;
---surface: #1D1C1F;
---on-surface: #DDDAE5;
---on-surface-variant: #7B7980; 
---on-surface-variant-2: #B9B6BF;
---outline: #3E3D40;
---bg-aqi-1: #89E589;
---on-bg-aqi-1: #1F331F;
---bg-aqi-2: #E5DD89;
---on-bg-aqi-2: #33311F;
---bg-aqi-3: #E5C089;
---on-bg-aqi-3: #332B1F;
---bg-aqi-4: #E58989;
---on-bg-aqi-4: #331F1F;
---bg-aqi-5: #E589B7;
---on-bg-aqi-5: #331F29;
---white: hsl(0, 0%, 100%);
---white-alpha-4: hsla(0, 0%, 100%, 0.04);
---white-alpha-8: hsla(0, 0%, 100%, 0.08);
---black-alpha-10: hsla(0, 0%, 0%, 0.1);
-
---gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
---gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
-
---ff-nunito-sans: 'Nunito Sans', sans-serif;
-
---heading: 5.6rem;
---title-1: 2rem;
---title-2: 1.8rem;
---title-3: 1.6rem;
---body-1: 2.2rem;
---body-2: 2rem;
---body-3: 1.6rem;
---label-1: 1.4rem;
---label-2: 1.2rem;
-
---weight-regular: 400;
---weight-semiBold: 600;
-
---shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
---shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
-
---radius-28: 28px;
---radius-16: 16px;
---radius-pill: 500px;
---radius-circle: 50%;
-
---transition-short: 100ms ease;
+\*----------------------------------- */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
-/*-----------------------------------*\
+::-webkit-scrollbar-thumb {
+  background-color: var(--white-alpha-8);
+  border-radius: var(--radius-pill);
+}
+
+:root {
+  --primary: #b5a1e5;
+  --on-primary: #100e17;
+  --background: #131214;
+  --on-background: #eae6f2;
+  --surface: #1d1c1f;
+  --on-surface: #dddae5;
+  --on-surface-variant: #7b7980;
+  --on-surface-variant-2: #b9b6bf;
+  --outline: #3e3d40;
+  --bg-aqi-1: #89e589;
+  --on-bg-aqi-1: #1f331f;
+  --bg-aqi-2: #e5dd89;
+  --on-bg-aqi-2: #33311f;
+  --bg-aqi-3: #e5c089;
+  --on-bg-aqi-3: #332b1f;
+  --bg-aqi-4: #e58989;
+  --on-bg-aqi-4: #331f1f;
+  --bg-aqi-5: #e589b7;
+  --on-bg-aqi-5: #331f29;
+  --white: hsl(0, 0%, 100%);
+  --white-alpha-4: hsla(0, 0%, 100%, 0.04);
+  --white-alpha-8: hsla(0, 0%, 100%, 0.08);
+  --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+  --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
+  --gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
+  --ff-nunito-sans: 'Nunito Sans', sans-serif;
+  --heading: 5.6rem;
+  --title-1: 2rem;
+  --title-2: 1.8rem;
+  --title-3: 1.6rem;
+  --body-1: 2.2rem;
+  --body-2: 2rem;
+  --body-3: 1.6rem;
+  --label-1: 1.4rem;
+  --label-2: 1.2rem;
+  --weight-regular: 400;
+  --weight-semiBold: 600;
+  --shadow-1: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+  --shadow-2: 0 3px 6px hsla(0, 0%, 0%, 0.4);
+  --radius-28: 28px;
+  --radius-16: 16px;
+  --radius-pill: 500px;
+  --radius-circle: 50%;
+  --transition-short: 100ms ease;
+}
+
+/* -----------------------------------*\
   #RESET
-\*-----------------------------------*/
+\*----------------------------------- */
 
 *,
 *::before,
@@ -120,7 +122,8 @@ sup {
   vertical-align: top;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 0.75em;
 }
 
@@ -146,19 +149,9 @@ body {
   background-color: var(--white-alpha-8);
 }
 
-::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--white-alpha-8);
-  border-radius: var(--radius-pill);
-}
-
-/*-----------------------------------*\
+/* -----------------------------------*\
   #MATERIAL ICON
-\*-----------------------------------*/
+\*----------------------------------- */
 
 @font-face {
   font-family: 'Material Symbols Rounded';
@@ -168,7 +161,7 @@ body {
 }
 
 .m-icon {
-  font-family: 'Material Symbols Rounded';
+  /* font-family: 'Material Symbols Rounded'; */
   font-weight: 400;
   font-style: normal;
   font-size: 2.4rem;
@@ -180,16 +173,18 @@ body {
   word-wrap: normal;
   direction: ltr;
   font-feature-settings: 'liga';
+
   --webkit-font-feature-settings: 'liga';
+
   -webkit-font-smoothing: antialiased;
   height: 1em;
   width: 1em;
   overflow: hidden;
 }
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #REUSED STYLE
-\*-----------------------------------*/
+\*----------------------------------- */
 
 .container {
   max-width: 1600px;
@@ -241,75 +236,76 @@ body {
   0% {
     clip-path: circle(0% at 50% 50%);
   }
+
   100% {
     clip-path: circle(100% at 50% 50%);
   }
 }
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #HEADER
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #CURRENT WEATHER
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #HIGHLIGHTS
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #HOURLY FORECAST
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #FORECAST
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #LOADING
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #ERROR SECTION
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #FOOTER
-\*-----------------------------------*/
+\*----------------------------------- */
 
 
 
 
 
-/*-----------------------------------*\
+/* -----------------------------------*\
   #MEDIA QUERIES
-\*-----------------------------------*/
+\*----------------------------------- */
