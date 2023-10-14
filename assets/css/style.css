@@ -157,7 +157,7 @@ body {
 }
 
 .m-icon {
-  font-family: 'Material Symbols Rounded';
+  /* font-family: 'Material Symbols Rounded'; */
   font-weight: 400;
   font-style: normal;
   font-size: 2.4rem;
@@ -356,7 +356,6 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh; /* for mobile browser */
   background-color: var(--surface);
   color: var(--on-surface);
   clip-path: circle(4% at calc(100% - 102px) 5%);
@@ -396,6 +395,7 @@ body {
   0% {
     transform: translateY(-50%) rotate(0deg);
   }
+
   100% {
     transform: translateY(-50%) rotate(1turn);
   }
@@ -450,6 +450,16 @@ body {
   padding-inline: 16px 24px;
 }
 
+.highlight-card :is(.wrapper, .card-list, .card-item) {
+  display: flex;
+  align-items: center;
+}
+
+.forecast-card :is(.card-item, .icon-wrapper) {
+  display: flex;
+  align-items: center;
+}
+
 .search-view .view-item :is(.m-icon, .item-subtitle) {
   color: var(--on-surface-variant);
 }
@@ -465,7 +475,6 @@ body {
 \*----------------------------------- */
 main {
   height: calc(100vh - 80px);
-  height: calc(100svh - 80px);
   overflow: hidden;
 }
 
@@ -476,19 +485,18 @@ article.container {
   gap: 20px;
   height: 100%;
   overflow-y: auto;
-  overflow-y: overlay;
 }
 
 article.container::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
-article.container:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
-  background-color: var(--white-alpha-8);
-}
-
 article.container::-webkit-scrollbar-button {
   height: 10px;
+}
+
+article.container:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--white-alpha-8);
 }
 
 article.container::before {
@@ -552,9 +560,10 @@ article.container::before {
   margin-block-end: 0;
 }
 
-.forecast-card :is(.card-item, .icon-wrapper) {
-  display: flex;
-  align-items: center;
+.highlight-card .card-item {
+  width: 50%;
+  justify-content: flex-end;
+  gap: 4px;
 }
 
 .forecast-card .card-item:not(:last-child) {
@@ -568,6 +577,10 @@ article.container::before {
 .forecast-card .label-1 {
   color: var(--on-surface-variant);
   font-weight: var(--weight-semiBold);
+}
+
+.highlight-card .label-1 {
+  color: var(--on-surface-variant);
 }
 
 .forecast-card .card-item > .label-1 {
@@ -597,11 +610,6 @@ article.container::before {
   position: relative;
 }
 
-.highlight-card :is(.wrapper, .card-list, .card-item) {
-  display: flex;
-  align-items: center;
-}
-
 .highlight-card .wrapper {
   justify-content: space-between;
   gap: 16px;
@@ -611,16 +619,6 @@ article.container::before {
   flex-wrap: wrap;
   flex-grow: 1;
   row-gap: 4px;
-}
-
-.highlight-card .card-item {
-  width: 50%;
-  justify-content: flex-end;
-  gap: 4px;
-}
-
-.highlight-card .label-1 {
-  color: var(--on-surface-variant);
 }
 
 .badge {
@@ -726,6 +724,7 @@ article.container::before {
 
 .loading::before {
   content: "";
+
   /* position: absolute;
   top: 50%;
   left: 50%; */
@@ -746,9 +745,7 @@ article.container::before {
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh;
   background-color: var(--background);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -797,14 +794,11 @@ article.container::before {
 
   .header .btn-primary {
     padding-inline: 16px 24px;
+    text-decoration: none;
   }
 
   .header .btn-primary .span {
     display: block;
-    text-decoration: none;
-  }
-
-  .header .btn-primary {
     text-decoration: none;
   }
 
@@ -814,7 +808,6 @@ article.container::before {
 
   main {
     height: calc(100vh - 96px);
-    height: calc(100svh - 96px);
   }
 
   article.container {
@@ -874,7 +867,7 @@ article.container::before {
     min-width: 12px;
   }
 
-  .hourly-forecast .card-sm{
+  .hourly-forecast .card-sm {
     padding: 16px;
   }
 }
@@ -974,7 +967,6 @@ article.container::before {
     border-radius: 0 0 var(--radius-28) var(--radius-28);
     border-block-start: 1px solid var(--outline);
     overflow-y: auto;
-    overflow-y: overlay;
   }
 
   .search-view .view-list:empty {
@@ -995,7 +987,6 @@ article.container::before {
 
   main {
     height: calc(100vh - 120px);
-    height: calc(100svh - 120px);
   }
 
   article.container {
@@ -1014,7 +1005,7 @@ article.container::before {
   .highlight-card:nth-child(-n+2) {
     height: 200px;
   }
-  
+
   .highlight-card:nth-child(n+3) {
     height: 150px;
   }
