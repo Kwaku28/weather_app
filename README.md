@@ -1,7 +1,7 @@
 
-# Project Title
+# Weather App
 
-A brief description of what this project does and who it's for
+This is a powerful fully managed weather and geolocation application that provides extensive information that ranges from the weather forecast, future weather, weather alerts, air quality data, IP lookup, and astronomy to sports, time zone, and geolocation.
 
 ## Tech Stack
 
@@ -9,7 +9,7 @@ A brief description of what this project does and who it's for
 
 ## Demo
 
-Insert gif or link to demo
+Insert a GIF or link to the demo
 
 ## Features
 
@@ -26,7 +26,7 @@ Insert gif or link to demo
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Kwaku28/weather_app.git
 ```
 
 Go to the project directory
